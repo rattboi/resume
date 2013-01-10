@@ -1,0 +1,172 @@
+% resume.tex
+% vim:set ft=tex spell:
+
+\documentclass[10pt,letterpaper]{article}
+\usepackage[letterpaper,margin=0.75in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{mdwlist}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{tgpagella}
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{-0.5#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+	#1 &
+	#2 \\
+\end{tabular*}}
+
+% make "C++" look pretty when used in text by touching up the plus signs
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+
+% and the actual content starts here
+\begin{document}
+
+\begin{center}
+{\LARGE \textbf{Bradon Kanyid}}
+
+11815 SW 3rd St.\ \ \textbullet
+\ \ Beaverton, OR 97005
+\\
+(360) 820-5112\ \ \textbullet
+\ \ bradon@kanyid.com
+\end{center}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Experience}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item
+	\headerrow
+		{\textbf{Silver Bay Seafoods, LLC.}}
+		{\textbf{Craig, AK}}
+	\\
+	\headerrow
+		{\emph{Automation Engineer}}
+		{\emph{Summers 2009 -- 2012}}
+	\begin{itemize*}
+    \item Silver Bay Seafoods is an Alaskan Fresh-Frozen fish processor. Wrote ladder logic for automating the plant's sensors and actuators, such as conveyor belts, hydraulic/pneumatic rams, joysticks, and heat-sealers. Developed touchscreen Human Machine Interfaces and SCADA for monitoring and controlling the automation systems, as well as data-collection middleware between the automation systems and business software using .NET and SQL. 
+	\end{itemize*}
+
+	\item
+	\headerrow
+		{\textbf{POS-X Inc.}}
+		{\textbf{Bellingham, WA}}
+	\\
+	\headerrow
+		{\emph{Tech Support Representative \& Internal Technician}}
+		{\emph{2007 -- 2009}}
+	\begin{itemize*}
+    \item POS-X develops Point-of-Sale equipment. Remote support for POS-X products, managing trouble tickets, e-mail, phone support, hardware repairs, and mass computer assembly. I developed a network-based automated burn-in and imaging system for new computers using PXElinux, BartPE, and Norton Ghost.
+	\end{itemize*}
+
+	\item
+	\headerrow
+		{\textbf{Pacific Northwest National Laboratories}}
+		{\textbf{Richland, WA}}
+	\\
+	\headerrow
+		{\emph{Embedded Programming Intern}}
+		{\emph{Summers 1999 -- 2001}}
+	\begin{itemize*}
+    \item Developed a data-logging temperature sensor for an array of mass spectrometers. Built using a combination of a custom PIC-based system and a print server to handle translation of RS232-Ethernet traffic. Wrote half of the device's firmware in PIC assembly, as well as a desktop application in Visual Basic 6 to data-log and graph historical data.
+	\end{itemize*}
+
+\end{itemize}
+
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Education}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item 
+	\headerrow
+  {\textbf{Portland State University} - \emph{Maseeh College of Engineering}}
+		{\textbf{Current GPA: 3.75}}
+	\\
+	\headerrow
+		{\emph{B.S. Computer Engineering}}
+		{\emph{2010 -- 2013}}
+    \begin{itemize*}
+      \item Expected Graduation 2013
+    \end{itemize*}
+\end{itemize}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Core Technical Skills}
+
+\begin{indentsection}{\parindent}
+\hyphenpenalty=1000
+\begin{description*}
+	\item[Languages:]
+    C, \CPP, Assembly (ARM, x86, z80, PIC, 68k), Ladder Logic, Bash, Python, Verilog, \LaTeX, SQL, Java (rusty), Clojure (learning)
+	\item[Software:]
+    Platform Agnostic (Linux/Windows/Mac/BSD), Embedded GNU Tools (GCC, GDB, Redboot), Visual Studio for .NET, Rockwell RSLogix 5000/500 and FactoryTalk Studio, Automation OPC 
+	\item[Hardware:]
+    SMD Soldering, PCB Layout, Digital Design, FPGAs, Allen-Bradley PLC/PanelView/VFD Development 
+
+\end{description*}
+\end{indentsection}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Honors Societies \& Volunteering}
+\begin{itemize}
+  \item
+	\headerrow
+		{\textbf{Eta Kappa Nu}}
+		{\textbf{http://web.cecs.pdx.edu/~eta/}}
+	\\
+  IEEE Honors Society. Required to be in top 1/4 of class.
+
+  \item
+	\headerrow
+		{\textbf{IEEE Student Store}}
+		{\textbf{http://ieee.pdx.edu/}}
+	\\
+  Volunteering includes 4 hours per week of desk duties, as well as occasional weekend store resupply.
+
+  \item
+  \headerrow
+    {\textbf{Computer Action Team (CAT)}}
+		{\textbf{http://cat.pdx.edu/thecat.html}}
+	\\
+  The CAT is a voluntary IT program for Portland State University's School of Engineering. Volunteer 4 hours weekly at the CAT front desk, helping students with computer and networking issues, as well as handling trouble tickets and maintaining student-related computer services. Test and develop new systems and services that students and fellow CAT members use. 
+
+  \item
+  \headerrow
+    {\textbf{International Aerial Robotic Competition}}
+		{\textbf{http://devel.avt.cecs.pdx.edu/projects/iarc}}
+	\\
+  Participated in developing an autonomous quadcopter (4-rotor helicopter). I have contributed to integrating various sensors to the quadcopter, specifically an infrared range finder for flight height information. Embedded software for the LPCxpresso board that powers the flight computer. Developed documentation for other parts of the low and high-level systems.
+
+\end{itemize}
+
+\end{document}
