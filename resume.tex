@@ -57,7 +57,7 @@ bradon@kanyid.org\ \ \textbullet
 \subsection*{Objective}
 \begin{indentsection}{\parindent}
 \begin{description*}
-	\item Embedded Systems internship in the Computer Engineering field.
+	\item To obtain a position where my technical skills will be utilized in an environment that challenges me.
 \end{description*}
 \end{indentsection}
 \vspace{1em}
@@ -71,15 +71,14 @@ bradon@kanyid.org\ \ \textbullet
 
 	\item 
 	\headerrow
-                {\textbf{B.S. Computer Engineering}}
-		{\textbf{Current GPA: 3.85}}
+        {\textbf{B.S. Computer Engineering}}
+		{\textbf{GPA: 3.85}}
 	\\
 	\headerrow
 		{\emph{Portland State University}}
-		{\emph{Graduation June 2013}}
+		{\emph{Magna Cum Laude, June 2013}}
 \end{itemize}
 \vspace{1em}
-
 
 \hrule
 \vspace{-0.4em}
@@ -89,15 +88,13 @@ bradon@kanyid.org\ \ \textbullet
 \hyphenpenalty=1000
 \begin{description*}
 	\item[Proficient Languages:]
-    C, \CPP, Assembly (ARM, x86, z80, PIC, 68k), Verilog, Ladder Logic, Bash Script 
+    C, \CPP, Python, Groovy, Assembly (ARM, x86, Z80, PIC, 68k), Verilog, Bash Script 
 	\item[Familiar Languages:]
-    Python, Visual Basic .NET, C\#, \LaTeX, SQL, Java, Clojure 
+        Go, Java, .NET (VB, C\#), Clojure, \LaTeX, SQL
 	\item[Software:]
-    Platform Agnostic (Linux/Windows/Mac/BSD), Embedded GNU Tools (GCC, GDB, Redboot), Visual Studio for .NET, VCS (Git, Subversion), Xilinx ISE WebPACK
+    Platform Agnostic (Linux/BSD/Mac/Windows), Embedded GNU Tools (GCC, GDB, Redboot), VCS (Git, Svn, IBM RTC), Gradle, Ant, Xilinx ISE WebPACK
 	\item[Hardware:]
     Digital Design, PCB Layout, FPGAs, SMD Soldering 
-	\item[Automation:]
-    Allen-Bradley PLC/PanelView/VFD Development, Rockwell RSLogix 5000/500, FactoryTalk Studio, Automation OPC 	
 \end{description*}
 \end{indentsection}
 \vspace{1em}
@@ -108,16 +105,22 @@ bradon@kanyid.org\ \ \textbullet
 \begin{itemize}
   \item 
   \headerrow 
-  {\textbf{Processor Cache Simulator (Verilog)}}
-  {\textbf{github.com/ekrause/0xBEEFA55}}
+  {\textbf{Auto Deploy (Gradle/Groovy)}}
+  {\textbf{(internal tool at UTi)}}
   \\
-  I developed a simple cache simulator with a small team for the final project in a Microprocessor System Design course. It read in textfile sample trace data, and displayed cache hit/miss statistics. I predominantly developed the core logic for the N-way set associative data and instruction caches modules in Verilog.
+  I completely rewrote the legacy internal UTi Deploy frontend tool. It uses a similar but extended specification language, and supports many new features including build artifact validation, deploy ordering, parallel deploys, simple dependency management, and simultaneous multiple deploy targets. First written in Gradle, then rewritten in Groovy to create decoupled, reusable, testable components in a shared Build and Deploy code library for future projects. This Groovy library includes a Spock test suite, Cobertura instrumentation for code coverage analysis, CodeNarc code quality static analysis, and SonarQube continuous inspection.
   \item 
   \headerrow 
-  {\textbf{ARM-based Audio Synthesizer (C)}}
+  {\textbf{Build Watcher (Go)}}
+  {\textbf{github.com/rattboi/build-watcher}}
+  \\
+  To centralise the visibility of the build and deploy process at UTi, I wrote a log-watching program that forwards intelligent build results to an IRC bot that summarizes the work in realtime.
+  \item 
+  \headerrow 
+  {\textbf{Audio Synthesizer (C / ARM Assembly)}}
   {\textbf{github.com/killerfriend/womprats}}
   \\
-  In Industry Design Processes, I worked with a team of three other students to design and build a microcontroller-based project. We developed a microcontroller-based audio synthesizer capable of generating up to 6 frequencies simultaneously. Gathered requirements, prototyped solutions, designed and built a PCB, and implemented all of the firmware in a single, 10-week semester. 
+  In Industry Design Processes, I worked with a team of three other students to design and build a microcontroller-based project. We developed an ARM-based audio synthesizer capable of generating up to 6 frequencies simultaneously. Gathered requirements, prototyped solutions, designed and built a PCB, and implemented all of the firmware in a single, 10-week semester. Course Honorable Mention.
   \item 
   \headerrow 
   {\textbf{Linux Kernel Driver (C)}}
@@ -129,7 +132,7 @@ bradon@kanyid.org\ \ \textbullet
   {\textbf{Video Game Console Emulator (C / ARM Assembly)}}
   {\textbf{sourceforge.net/projects/wonderboi}}
   \\
-  Initially ported, then extended a PC-based emulator for a portable game console to another portable embedded platform. The final version of the emulator was almost entirely written by me. Wrote screen drawing/scaling, file access, primitive graphics caching, UI, sound, memory mapping, and more.
+  Initially ported, then extended a PC-based emulator for a portable game console to another portable embedded platform. The final version of the emulator was almost entirely written by me. Wrote screen blitting/scaling, file i/o, graphics caching, UI, sound, memory mapping, and more.
 \end{itemize}
 
 \hrule
@@ -153,13 +156,6 @@ bradon@kanyid.org\ \ \textbullet
 
   \item
 	\headerrow
-		{\textbf{Womprats Audio Synthesizer}}
-		{\textbf{github.com/killerfriend/womprats}}
-	\\
-  Honorable Mention in Industry Design Practices course.
-  
-  \item
-	\headerrow
 		{\textbf{IEEE Student Store}}
 		{\textbf{ieee.pdx.edu}}
 	\\
@@ -172,12 +168,6 @@ bradon@kanyid.org\ \ \textbullet
 	\\
   The CAT is a voluntary IT program for Portland State University's School of Engineering. Volunteer 4 hours weekly at the CAT front desk, helping students with computer and networking issues, as well as handling trouble tickets and maintaining student-related computer services. Test and develop new systems and services used by students and fellow CAT members. 
 
-  \item
-  \headerrow
-    {\textbf{International Aerial Robotic Competition}}
-		{\textbf{devel.avt.cecs.pdx.edu/projects/iarc}}
-	\\
-  Participated in developing an autonomous quadcopter (4-rotor helicopter). Contributed to integrating various sensors to the quadcopter, specifically an infrared range finder for flight height information. Wrote software for embedded LPCxpresso flight computer. Developed documentation for other parts of the low and high-level systems.
 \end{itemize}
 
 \hrule
@@ -189,11 +179,23 @@ bradon@kanyid.org\ \ \textbullet
 
 	\item
 	\headerrow
+		{\textbf{Software Engineer}}
+		{\textbf{UTi Worldwide Inc.}}
+	\\
+	\headerrow
+		{\emph{2013 -- Current}}
+		{\emph{Portland, OR}}
+	\begin{itemize*}
+    \item Introduced Gradle technology as a migration path away from legacy Ant build system. Wrote a templated multi-level orchestration engine for managing TIBCO BusinessEvents technology stack. Developed an automatic deployment program focusing on service-level orchestration. Created TDD-based Groovy library for build/deploy tasks. Wrote deployment monitoring tools to centralize deploy reporting across eight development and testing environments, as well as the production environment. Working to implement CI/CD via Docker.
+	\end{itemize*}
+
+	\item
+	\headerrow
 		{\textbf{Automation Engineer}}
 		{\textbf{Silver Bay Seafoods, LLC.}}
 	\\
 	\headerrow
-		{\emph{2009 -- Current}}
+		{\emph{2009 -- 2013}}
 		{\emph{Craig, AK}}
 	\begin{itemize*}
     \item Wrote ladder logic for automating plant's sensors and actuators, such as conveyor belts, hydraulic rams, joysticks, and heat-sealers. Developed touchscreen Human Machine Interfaces and SCADA for monitoring and controlling the automation systems, data-collection middleware between automation systems and business software using .NET and SQL. Developed internal company website for remote observation and statistics in ASP.net. 
@@ -220,7 +222,7 @@ bradon@kanyid.org\ \ \textbullet
 		{\emph{Summers 1999 -- 2001}}
 		{\emph{Richland, WA}}
 	\begin{itemize*}
-    \item Developed data-logging temperature sensor for an array of mass spectrometers. Built using a combination of a custom PIC-based system and print server to handle translation of RS232-Ethernet traffic. Wrote device's firmware in PIC assembly, and desktop application in Visual Basic 6 to data-log and graph historical data and trends.
+    \item Developed data-logging temperature sensor for an array of mass spectrometers. Built using a custom PIC-based system. Wrote device's firmware in PIC assembly, and desktop application in Visual Basic 6 to log data and graph historical trends.
 	\end{itemize*}
 
 \end{itemize}
