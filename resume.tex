@@ -1,4 +1,4 @@
-% resume.tex
+% resume-base.tex
 % vim:set ft=tex spell:
 
 \documentclass[10pt,letterpaper]{article}
@@ -55,84 +55,30 @@ bradon@kanyid.org\ \ \textbullet
 \hrule
 \vspace{-0.4em}
 \subsection*{Objective}
-\begin{indentsection}{\parindent}
-\begin{description*}
-	\item Develop a CI/CD infrastructure while working on Open Source technology
-\end{description*}
-\end{indentsection}
+\input{Objectives/Generic}
 \vspace{1em}
 
 \hrule
 \vspace{-0.4em}
 \subsection*{Education}
-
-\begin{itemize}
-	\parskip=0.1em
-
-	\item 
-	\headerrow
-        {\textbf{B.S. Computer Engineering}}
-		{\textbf{GPA: 3.85}}
-	\\
-	\headerrow
-		{\emph{Portland State University}}
-		{\emph{Magna Cum Laude, June 2013}}
-\end{itemize}
+\input{Education/PortlandState}
 \vspace{1em}
 
 \hrule
 \vspace{-0.4em}
 \subsection*{Core Technical Skills}
-
-\begin{indentsection}{\parindent}
-\hyphenpenalty=1000
-\begin{description*}
-	\item[Proficient Languages:]
-    C, \CPP, Python, Groovy, Assembly (ARM, x86, Z80, PIC, 68k), Verilog, Bash
-	\item[Familiar Languages:]
-    Go, Java, .NET (VB, C\#), Clojure, \LaTeX, SQL, Rust
-	\item[Software:]
-    Platform Agnostic (Linux/BSD/Mac/Windows), Embedded GNU Tools (GCC, GDB, Redboot), VCS (Git, Svn, IBM RTC), Gradle, Ant, Xilinx ISE WebPACK
-	\item[Hardware:]
-    Digital Design, PCB Layout, FPGAs, SMD Soldering 
-\end{description*}
-\end{indentsection}
+\input{Skills/Generic}
 \vspace{1em}
 
 \hrule
 \vspace{-0.4em}
 \subsection*{Major Projects}
 \begin{itemize}
-  \item 
-  \headerrow 
-  {\textbf{Auto Deploy (Gradle/Groovy)}}
-  {\textbf{(internal tool at UTi)}}
-  \\
-  I completely rewrote the legacy internal UTi Deploy frontend tool. It uses a similar but extended specification language, and supports many new features including build artifact validation, deploy ordering, parallel deploys, simple dependency management, and simultaneous multiple deploy targets. First written in Gradle, then rewritten in Groovy to create decoupled, reusable, testable components in a shared Build and Deploy code library for future projects. This Groovy library includes a Spock test suite, Cobertura instrumentation for code coverage analysis, CodeNarc code quality static analysis, and SonarQube continuous inspection.
-  \item 
-  \headerrow 
-  {\textbf{Build Watcher (Go)}}
-  {\textbf{github.com/rattboi/build-watcher}}
-  \\
-  To centralise the visibility of the build and deploy process at UTi, I wrote a log-watching program that forwards intelligent build results to an IRC bot that summarizes the work in realtime.
-  \item 
-  \headerrow 
-  {\textbf{Mopidy-Subsonic (Python))}}
-  {\textbf{github.com/rattboi/mopidy-subsonic}}
-  \\
-  Mopidy is a music framework that decouples music service frontends and backends, e.g., it allows the use of Spotify and Youtube with a custom web frontend. I wrote an extension that allows the use of the music service Subsonic as a backend within the Mopidy framework. I maintain the Mopidy-Subsonic package on PyPI.
-  \item 
-  \headerrow 
-  {\textbf{Linux Kernel Driver (C)}}
-  {\textbf{github.com/rattboi/blec\_dev}}
-  \\
-  In Linux Device Drivers, I wrote a Linux kernel driver in C for a USB external input/output device. It supported stable hot-plugging and removal of simultaneous devices, with separate interfaces to each device.
-  \item 
-  \headerrow 
-  {\textbf{Video Game Console Emulator (C / ARM Assembly)}}
-  {\textbf{sourceforge.net/projects/wonderboi}}
-  \\
-  Initially ported, then extended a PC-based emulator for a portable game console to another portable embedded platform. The final version of the emulator was almost entirely written by me. Wrote screen blitting/scaling, file i/o, graphics caching, UI, sound, memory mapping, and more.
+  \input{Projects/AutoDeploy}
+  \input{Projects/BuildWatcher}
+  \input{Projects/MopidySubsonic}
+  \input{Projects/BlecDev}
+  \input{Projects/WonderBoi}
 \end{itemize}
 
 \hrule
@@ -147,27 +93,9 @@ bradon@kanyid.org\ \ \textbullet
 \vspace{-0.4em}
 \subsection*{Honors Societies \& Volunteering}
 \begin{itemize}
-  \item
-	\headerrow
-		{\textbf{Eta Kappa Nu}}
-		{\textbf{web.cecs.pdx.edu/\textasciitilde eta/}}
-	\\
-  IEEE Honors Society. Limited to top 25\% of Department.
-
-  \item
-	\headerrow
-		{\textbf{IEEE Student Store}}
-		{\textbf{ieee.pdx.edu}}
-	\\
-  Volunteering includes 4 hours per week of desk duties, as well as occasional weekend store resupply.
-
-  \item
-  \headerrow
-    {\textbf{Computer Action Team (CAT)}}
-		{\textbf{cat.pdx.edu/thecat.html}}
-	\\
-  The CAT is a voluntary IT program for Portland State University's School of Engineering. Volunteer 4 hours weekly at the CAT front desk, helping students with computer and networking issues, as well as handling trouble tickets and maintaining student-related computer services. Test and develop new systems and services used by students and fellow CAT members. 
-
+  \input{Honors/EtaKappaNu}
+  \input{Honors/IEEEStudentStore}
+  \input{Honors/CATVolunteer}
 \end{itemize}
 
 \hrule
@@ -175,87 +103,19 @@ bradon@kanyid.org\ \ \textbullet
 \subsection*{Experience}
 
 \begin{itemize}
-	\parskip=0.1em
+  \parskip=0.1em
 
-	\item
-	\headerrow
-		{\textbf{Software Engineer}}
-		{\textbf{UTi Worldwide Inc.}}
-	\\
-	\headerrow
-		{\emph{2013 -- Current}}
-		{\emph{Portland, OR}}
-	\begin{itemize*}
-    \item Introduced Gradle technology as a migration path away from legacy Ant build system. Wrote a templated multi-level orchestration engine for managing TIBCO BusinessEvents technology stack. Developed an automatic deployment program focusing on service-level orchestration. Created TDD-based Groovy library for build/deploy tasks. Wrote deployment monitoring tools to centralize deploy reporting across eight development and testing environments, as well as the production environment. Working to implement CI/CD via Docker.
-	\end{itemize*}
-
-	\item
-	\headerrow
-		{\textbf{Automation Engineer}}
-		{\textbf{Silver Bay Seafoods, LLC.}}
-	\\
-	\headerrow
-		{\emph{2009 -- 2013}}
-		{\emph{Craig, AK}}
-	\begin{itemize*}
-    \item Wrote ladder logic for automating plant's sensors and actuators, such as conveyor belts, hydraulic rams, joysticks, and heat-sealers. Developed touchscreen Human Machine Interfaces and SCADA for monitoring and controlling the automation systems, data-collection middleware between automation systems and business software using .NET and SQL. Developed internal company website for remote observation and statistics in ASP.net. 
-	\end{itemize*}
-
-	\item
-	\headerrow
-		{\textbf{Tech Support Representative \& Internal Technician}}
-		{\textbf{POS-X Inc.}}
-	\\
-	\headerrow
-		{\emph{2007 -- 2009}}
-		{\emph{Bellingham, WA}}
-	\begin{itemize*}
-    \item Support for POS-X products, managing trouble tickets, e-mail, phone support, hardware repairs, and mass computer assembly. Developed network-based automated burn-in and imaging system for new computers using PXElinux, BartPE, and Norton Ghost.
-	\end{itemize*}
-
-	\item
-	\headerrow
-		{\textbf{Embedded Programming Intern}}
-		{\textbf{Pacific Northwest National Laboratories}}
-	\\
-	\headerrow
-		{\emph{Summers 1999 -- 2001}}
-		{\emph{Richland, WA}}
-	\begin{itemize*}
-    \item Developed data-logging temperature sensor for an array of mass spectrometers. Built using a custom PIC-based system. Wrote device's firmware in PIC assembly, and desktop application in Visual Basic 6 to log data and graph historical trends.
-	\end{itemize*}
-
+  \input{Experience/UTi}
+  \input{Experience/SBS}
+  \input{Experience/POS-X}
+  \input{Experience/PNNL}
 \end{itemize}
 
 \hrule
 \vspace{-0.4em}
 \subsection*{References}
 \begin{itemize}
-  \item
-  \headerrow
-    {\textbf{Gary Klimowicz}}
-    {gak@pobox.com}
-  \\
-  \headerrow
-    {\textbf{Technical Lead Engineer, UTi Worldwide Inc.}}
-    {503.816.1526}
-  \item
-  \headerrow
-    {\textbf{Kevin Barry}}
-    {kevin.barry@silverbayseafoods.com}
-  \\
-  \headerrow
-    {\textbf{Plant Manager, Silver Bay Seafoods}}
-    {907.738.7270}
-  \item
-  \headerrow
-    {\textbf{Mark Faust}}
-    {faustm@ece.pdx.edu}
-  \\
-  \headerrow
-    {\textbf{Professor, Portland State University}}
-    {503.725.5412}
-    
+  \input{References/Generic}
 \end{itemize}
 
 \end{document}

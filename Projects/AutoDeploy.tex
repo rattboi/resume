@@ -1,0 +1,6 @@
+  \item 
+  \headerrow 
+  {\textbf{Auto Deploy (Gradle/Groovy)}}
+  {\textbf{(internal tool at UTi)}}
+  \\
+  I completely rewrote the legacy internal UTi Deploy frontend tool. It uses a similar but extended specification language, and supports many new features including build artifact validation, deploy ordering, parallel deploys, simple dependency management, and simultaneous multiple deploy targets. First written in Gradle, then rewritten in Groovy to create decoupled, reusable, testable components in a shared Build and Deploy code library for future projects. This Groovy library includes a Spock test suite, Cobertura instrumentation for code coverage analysis, CodeNarc code quality static analysis, and SonarQube continuous inspection.

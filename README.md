@@ -1,4 +1,4 @@
-resume
-======
+public resume
+=============
 
-Personal resume
+Personal resume (public bits)
