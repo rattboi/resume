@@ -5,3 +5,6 @@ all:
 
 clean:
 	rm $(DOC).log $(DOC).aux
+
+show:
+	evince $(DOC).pdf &
