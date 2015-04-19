@@ -44,6 +44,47 @@
 #2
 \vspace{#3}}
 
+\newcommand{\objective}[1]
+{
+\begin{indentsection}{\parindent}
+  \begin{description*}
+    \item #1
+  \end{description*}
+\end{indentsection}
+}
+
+\newcommand{\skills}[4]
+{
+  \begin{indentsection}{\parindent}
+  \hyphenpenalty=1000
+  \begin{description*}
+    \item[Proficient Languages:]
+    #1
+    \item[Familiar Languages:]
+    #2
+    \item[Software:]
+    #3
+    \item[Hardware:]
+    #4
+  \end{description*}
+  \end{indentsection}
+}
+
+\newcommand{\education}[4]
+{
+\begin{itemize}
+  \parskip=0.1em
+  \item
+  \headerrow
+    {\textbf{#1}}
+    {\textbf{#2}}
+  \\
+  \headerrow
+    {\emph{#3}}
+    {\emph{#4}}
+\end{itemize}
+}
+
 \newcommand{\experience}[5]
 {
 	\item
@@ -78,3 +119,4 @@
 	\\
     #3
 }
+

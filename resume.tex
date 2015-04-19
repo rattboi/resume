@@ -1,20 +1,12 @@
 % resume.tex
 % vim:set ft=tex spell:
 
-\input{preamble}
+\input{Preamble}
 
 % and the actual content starts here
 \begin{document}
 
-\begin{center}
-{\LARGE \textbf{Bradon Kanyid}}
-
-11815 SW 3rd St.\ \ \textbullet
-\ \ Beaverton, OR 97005 \ \ \textbullet
-\ \ (360) 820-5112\\
-bradon@kanyid.org\ \ \textbullet
-\ \ www.kanyid.org
-\end{center}
+\input{Me}
 
 \makeresumesection{Objective}{
     \input{Objectives/Generic}
@@ -30,43 +22,42 @@ bradon@kanyid.org\ \ \textbullet
 
 \makeresumesection{Major Projects}{
     \begin{itemize}
-      \input{Projects/AutoDeploy}
-      \input{Projects/BuildWatcher}
-      \input{Projects/MopidySubsonic}
-      \input{Projects/BlecDev}
-      \input{Projects/WonderBoi}
+            \input{Projects/AutoDeploy}
+            \input{Projects/BuildWatcher}
+            \input{Projects/MopidySubsonic}
+            \input{Projects/BlecDev}
+            \input{Projects/WonderBoi}
     \end{itemize}
 }{0em}
 
 \hrule
 \begin{center}
-{\emph{Honors and Projects Continue on Next Page}}
-
+    {\emph{Honors and Projects Continue on Next Page}}
 \end{center}
 
 \newpage
 
 \makeresumesection{Honors Societies \& Volunteering}{
-    \begin{itemize}
-      \input{Honors/EtaKappaNu}
-      \input{Honors/IEEEStudentStore}
-      \input{Honors/CATVolunteer}
-    \end{itemize}
+\begin{itemize}
+        \input{Honors/EtaKappaNu}
+        \input{Honors/IEEEStudentStore}
+        \input{Honors/CATVolunteer}
+\end{itemize}
 }{0em}
 
 \makeresumesection{Experience}{
     \begin{itemize}
-      \parskip=0.1em
-      \input{Experience/UTi}
-      \input{Experience/SBS}
-      \input{Experience/POS-X}
-      \input{Experience/PNNL}
+            \parskip=0.1em
+            \input{Experience/UTi}
+            \input{Experience/SBS}
+            \input{Experience/POS-X}
+            \input{Experience/PNNL}
     \end{itemize}
 }{0em}
 
 \makeresumesection{References}{
     \begin{itemize}
-      \input{References/Generic}
+            \input{References/Generic}
     \end{itemize}
 }{0em}
 
