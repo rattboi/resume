@@ -12,24 +12,24 @@
 % that need indentation to the level of all text in the document
 \newenvironment{indentsection}[1]%
 {\begin{list}{}%
-	{\setlength{\leftmargin}{#1}}%
-	\item[]%
+    {\setlength{\leftmargin}{#1}}%
+    \item[]%
 }
 {\end{list}}
 
 % opposite of above; bump a section back toward the left margin
 \newenvironment{unindentsection}[1]%
 {\begin{list}{}%
-	{\setlength{\leftmargin}{-0.5#1}}%
-	\item[]%
+    {\setlength{\leftmargin}{-0.5#1}}%
+    \item[]%
 }
 {\end{list}}
 
 % format two pieces of text, one left aligned and one right aligned
 \newcommand{\headerrow}[2]
 {\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
-	#1 &
-	#2 \\
+    #1 &
+    #2 \\
 \end{tabular*}}
 
 % make "C++" look pretty when used in text by touching up the plus signs
@@ -81,23 +81,23 @@
 
 \newcommand{\experience}[5]
 {\item
-	\headerrow
-		{\textbf{#1}}
-		{\textbf{#2}}
-	\\
-	\headerrow
-		{\emph{#3}}
-		{\emph{#4}}
-	\begin{itemize*}
+    \headerrow
+        {\textbf{#1}}
+        {\textbf{#2}}
+    \\
+    \headerrow
+        {\emph{#3}}
+        {\emph{#4}}
+    \begin{itemize*}
     \item #5
-	\end{itemize*}}
+    \end{itemize*}}
 
 \newcommand{\honors}[3]
 {\item
   \headerrow
     {\textbf{#1}}
     {\textbf{#2}}
-	\\
+    \\
     #3}
 
 \newcommand{\projects}[3]
@@ -105,7 +105,7 @@
   \headerrow
     {\textbf{#1}}
     {\textbf{#2}}
-	\\
+    \\
     #3}
 
 \newcommand{\myreference}[4]
