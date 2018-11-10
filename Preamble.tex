@@ -51,7 +51,7 @@
   \end{description*}
 \end{indentsection}}
 
-\newcommand{\skills}[4]
+\newcommand{\skills}[3]
 {\begin{indentsection}{\parindent}
   \hyphenpenalty=1000
   \begin{description*}
@@ -61,14 +61,12 @@
     #2
     \item[Software:]
     #3
-    \item[Embedded:]
-    #4
   \end{description*}
   \end{indentsection}}
 
 \newcommand{\education}[4]
 {\begin{itemize}
-  \parskip=0.1em
+%  \parskip=0.1em
   \item
   \headerrow
     {\textbf{#1}}
@@ -88,9 +86,10 @@
     \headerrow
         {\emph{#3}}
         {\emph{#4}}
-    \begin{itemize*}
-    \item #5
-    \end{itemize*}}
+    \\
+    \parskip=0.5em
+    #5
+}
 
 \newcommand{\honors}[3]
 {\item
@@ -106,6 +105,7 @@
     {\textbf{#1}}
     {\textbf{#2}}
     \\
+    \parskip=0.2em
     #3}
 
 \newcommand{\myreference}[4]
